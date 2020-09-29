@@ -79,50 +79,15 @@ export class App extends Component {
 
   render() {
 
-    let sideBar = null;
     let wrapperDiv = 'wrapper';
     let pageContentDiv = 'page-content-wrapper';
     let sideBarWrapper = 'sidebar-wrapper';
-    let AC_Card1 = null;
-    let AC_Card2 = null;
-    let AC_Card3 = null;
-    let AC_Card4 = null;
-    let AC_prog_chart1 = null;
-    let AC_prog_chart2 = null;
-    let AC_prog_chart3 = null;
-    let AC_prog_chart4 = null;
 
     if (this.state.sideBarOpen) {
-      /* sideBar = <Sidebar />; */
       wrapperDiv = 'wrapper-active';
       pageContentDiv = 'page-content-wrapper-active';
       sideBarWrapper = 'sidebar-wrapper-active';
       console.log("inside if.");
-    }
-
-    let AC_Count = DynaTower.dynaTower.activityCenter.length;
-    console.log("AC_Count is " + AC_Count)
-
-    if (this.state.index + 1 <= AC_Count) {
-      AC_Card1 = <ACCard ACData={DynaTower.dynaTower.activityCenter[this.state.index]} />
-      AC_prog_chart1 = <ACProgressChart net_val={DynaTower.dynaTower.activityCenter[this.state.index].progressValue} />
-    }
-
-
-    if (this.state.index + 2 <= AC_Count) {
-      AC_Card2 = <ACCard ACData={DynaTower.dynaTower.activityCenter[this.state.index + 1]} />
-      AC_prog_chart2 = <ACProgressChart net_val={DynaTower.dynaTower.activityCenter[this.state.index + 1].progressValue} />
-    }
-
-
-    if (this.state.index + 3 <= AC_Count) {
-      AC_Card3 = <ACCard ACData={DynaTower.dynaTower.activityCenter[this.state.index + 2]} />
-      AC_prog_chart3 = <ACProgressChart net_val={DynaTower.dynaTower.activityCenter[this.state.index + 2].progressValue} />
-    }
-
-    if (this.state.index + 4 <= AC_Count) {
-      AC_Card4 = <ACCard ACData={DynaTower.dynaTower.activityCenter[this.state.index + 3]} />
-      AC_prog_chart4 = <ACProgressChart net_val={DynaTower.dynaTower.activityCenter[this.state.index + 3].progressValue} />
     }
 
     return (
