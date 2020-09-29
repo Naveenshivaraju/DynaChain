@@ -1,0 +1,123 @@
+
+
+/*---------------------------------
+header navbar design
+----------------------*/
+
+
+.brand {
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+.my-navbar {
+    padding: 0px;
+    background-color: white;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .16);
+  }
+  
+  .text-gray-600 {
+    color: #d2d6f0 !important;
+  }
+  
+  .imgProfile {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+  
+  .navbar-nav>li>a>i {
+    font-size: 18px;
+    color: #b3b3b3;
+    margin: 5px 0px 0px 0px;
+    padding: 0px;
+  }
+  
+  .badge-counter {
+    position: absolute;
+    transform: scale(.7);
+    transform-origin: top right;
+    right: 6px;
+    margin-top: 4px;
+  }
+  
+  
+  .dropdown,
+  .dropleft,
+  .dropright,
+  .dropup {
+    position: relative;
+  }
+  
+  .nav-flag,
+  .nav-icon {
+    padding: .1rem .8rem;
+    display: block;
+    font-size: 1.5rem;
+    color: #6c757d;
+    transition: background .1s ease-in-out, color .1s ease-in-out;
+    line-height: 1.4;
+  }
+  
+  
+  .navbar-expand .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+  
+  .navbar-nav .dropdown-menu {
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, .05);
+  }
+  
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+  }
+  
+  .dropdown-menu-lg {
+    min-width: 20rem;
+  }
+  
+  
+  .position-relative {
+    position: relative !important;
+  }
+  
+  .nav-item .indicator {
+    background: #3b7ddd;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, .05);
+    border-radius: 50%;
+    display: block;
+    height: 18px;
+    width: 18px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: absolute;
+    top: 0;
+    right: -8px;
+    text-align: center;
+    transition: top .1s ease-out;
+    font-size: .675rem;
+    color: #fff;
+  }
+  
+  /*---------------------------------
+  header navbar design
+  ----------------------*/
+
+  #dropdown-custom-components {
+    background-color: white;
+    color: black !important;
+    opacity: 0.8;
+    border: none;
+    font-size: 15px;
+    margin-top: 14px;
+    margin-left: 20px;
+    font-weight: 300;
+    padding: 0px;
+  }
+
+  #dropdown-custom-components:hover {
+    opacity: 1;
+  }

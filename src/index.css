@@ -1,0 +1,19 @@
+
+/* CSS applied to all elemets. */
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  background: #f7f7fc;
+  font-family: 'Roboto', sans-serif;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+body,
+html {
+  height: 100%;
+}

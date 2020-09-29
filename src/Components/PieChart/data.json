@@ -1,0 +1,39 @@
+{
+    "parts" : [
+        {
+          "id": "Madrid, Spain",
+          "label": "Madrid, Spain",
+          "value": 3100,
+          "color": "#f2bb43",
+          "labelValue" : "31%"
+        },
+        {
+          "id": "Munich, Germany",
+          "label": "Munich, Germany",
+          "value": 4908,
+          "color": "#967bdb",
+          "labelValue" : "49%"
+        },
+        {
+          "id": "Cap Town, South Africa",
+          "label": "Cap Town, South Africa",
+          "value": 1500,
+          "color": "#a5a5a5",
+          "labelValue" : "15%"
+        },
+        {
+          "id": "Las Vegas, Nevada​",
+          "label": "Las Vegas, Nevada​",
+          "value": 3800,
+          "color": "#57afd8",
+          "labelValue" : "38%"
+        },
+        {
+          "id": "Baton Rouge, Louisiana",
+          "label": "Baton Rouge, Louisiana",
+          "value": 2394,
+          "color": "#8cc151",
+          "labelValue" : "23.9%"
+        }
+    ]
+}

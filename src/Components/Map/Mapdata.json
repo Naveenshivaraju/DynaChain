@@ -1,0 +1,54 @@
+{
+    "ActivityCenter": [
+        {
+            "type": "Point",
+            "description": "Description",
+            "coordinates": [
+                40.4168,
+                -3.7038
+            ],
+            "name": "Madrid, Spain",
+            "iconurl":"http://maps.google.com/mapfiles/kml/paddle/ylw-circle.png"      
+        },
+        {
+            "type": "Point",
+            "description": "Description",
+            "coordinates": [
+                48.1351,
+                11.5820
+            ],
+            "name": "Munich, Germany",
+            "iconurl":"http://maps.google.com/mapfiles/kml/paddle/wht-circle.png"
+        },
+        {
+            "type": "Point",
+            "description": "Description",
+            "coordinates": [
+                -33.9249,
+                18.4241
+            ],
+            "name": "Cap Town, South Africa",
+            "iconurl":"http://maps.google.com/mapfiles/kml/paddle/purple-circle.png"  
+        },
+        {
+            "type": "Point",
+            "description": "Description",
+            "coordinates": [
+                36.1699,
+                -115.1398
+            ],
+            "name": "Las Vegas, Nevada",
+            "iconurl":"http://maps.google.com/mapfiles/kml/paddle/grn-circle.png"  
+        },
+        {
+            "type": "Point",
+            "description": "Description",
+            "coordinates": [
+                30.4515,
+                -91.1871
+            ],
+            "name": "Baton Rouge, Louisiana",
+            "iconurl":"http://maps.google.com/mapfiles/kml/paddle/red-circle.png"  
+        }
+    ]
+}
