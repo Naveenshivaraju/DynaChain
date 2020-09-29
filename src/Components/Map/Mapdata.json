@@ -1,6 +1,7 @@
 {
     "ActivityCenter": [
         {
+            "key":1,
             "type": "Point",
             "description": "Description",
             "coordinates": [
@@ -11,6 +12,7 @@
             "iconurl":"http://maps.google.com/mapfiles/kml/paddle/ylw-circle.png"      
         },
         {
+            "key":2,
             "type": "Point",
             "description": "Description",
             "coordinates": [
@@ -21,6 +23,7 @@
             "iconurl":"http://maps.google.com/mapfiles/kml/paddle/wht-circle.png"
         },
         {
+            "key":3,
             "type": "Point",
             "description": "Description",
             "coordinates": [
@@ -31,6 +34,7 @@
             "iconurl":"http://maps.google.com/mapfiles/kml/paddle/purple-circle.png"  
         },
         {
+            "key":4,
             "type": "Point",
             "description": "Description",
             "coordinates": [
@@ -41,6 +45,7 @@
             "iconurl":"http://maps.google.com/mapfiles/kml/paddle/grn-circle.png"  
         },
         {
+            "key":5,
             "type": "Point",
             "description": "Description",
             "coordinates": [

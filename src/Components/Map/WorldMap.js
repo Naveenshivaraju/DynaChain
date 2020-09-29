@@ -30,51 +30,52 @@ function Map() {
 
   return (
     <MyContext.Consumer>
-      { (context) => (
-    <GoogleMap
-      defaultZoom={1}
-      defaultCenter={{  lat: 30.3601, lng: -0.0589  }}
-      /* defaultOptions={{ styles: mapStyles }} */
-    >
-      {MapData.ActivityCenter.map(AC => (
-        <Marker
-         /*  key={park.properties.PARK_ID} */
-          position={{
-            lat: AC.coordinates[0],
-            lng: AC.coordinates[1]
-          }}
-          onClick={() => {
-            setSelectedPark(AC);
-          }}
-          icon={{
-            url: AC.iconurl,
-            scaledSize: new window.google.maps.Size(25, 25)
-          }}
-        />
-      ))}
+      {
+        (context) => (
+          <GoogleMap
+            defaultZoom={1}
+            defaultCenter={{ lat: 30.3601, lng: -0.0589 }}
+          /* defaultOptions={{ styles: mapStyles }} */
+          >
+            {MapData.ActivityCenter.map(AC => (
+              <Marker key={AC.key}
+                /*  key={park.properties.PARK_ID} */
+                position={{
+                  lat: AC.coordinates[0],
+                  lng: AC.coordinates[1]
+                }}
+                onClick={() => {
+                  setSelectedPark(AC);
+                }}
+                icon={{
+                  url: AC.iconurl,
+                  scaledSize: new window.google.maps.Size(25, 25)
+                }}
+              />
+            ))}
 
-      {selectedPark && (
-        <div>
-        <InfoWindow
-          onCloseClick={() => {
-            setSelectedPark(null);
-          }}
-          position={{
-            lat: selectedPark.coordinates[0],
-            lng: selectedPark.coordinates[1],
-          }}
-        >
-          <div>
-            {console.log(context.state)}
-            {console.log(context.increment)}
-            <a value={selectedPark.name} onClick={() => context.increment(selectedPark.name)} style={{cursor:'pointer'}} className="ACLink"><div>{selectedPark.name}</div></a>
-            <p>{selectedPark.description}</p>
-          </div>
-        </InfoWindow>
-        </div>
-      )}
-    </GoogleMap>
-      )}
+            {selectedPark && (
+              <div>
+                <InfoWindow
+                  onCloseClick={() => {
+                    setSelectedPark(null);
+                  }}
+                  position={{
+                    lat: selectedPark.coordinates[0],
+                    lng: selectedPark.coordinates[1],
+                  }}
+                >
+                  <div>
+                    {console.log(context.state)}
+                    {console.log(context.increment)}
+                    <a value={selectedPark.name} onClick={() => context.increment(selectedPark.name)} style={{ cursor: 'pointer' }} className="ACLink"><div>{selectedPark.name}</div></a>
+                    <p>{selectedPark.description}</p>
+                  </div>
+                </InfoWindow>
+              </div>
+            )}
+          </GoogleMap>
+        )}
     </MyContext.Consumer>
   );
 }
