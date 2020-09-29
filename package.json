@@ -29,6 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://rohit1999c.github.io/DynaChain",
   "eslintConfig": {
     "extends": "react-app"
   },

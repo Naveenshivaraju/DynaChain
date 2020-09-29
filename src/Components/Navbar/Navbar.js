@@ -1,7 +1,5 @@
 import React from 'react'
 import './Navbar.css'
-import { Link } from 'react-router-dom'
-import * as FaIcons from "react-icons/fa";
 /* import ToggleButton from '../Sidebar/ToggleButton'; */
 import profileImage from './user1.png';
 import { Dropdown, CustomToggle } from 'react-bootstrap';
