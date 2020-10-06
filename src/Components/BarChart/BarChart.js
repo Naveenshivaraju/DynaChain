@@ -17,17 +17,17 @@ const BarChart = () => (
     <MyContext.Consumer>
         { (context) => {
             dataNumber = context.state.dataNumber;
-            if(dataNumber == 1)
+            if(dataNumber === 1)
             {
                 data=data1;
             }
-            else if (dataNumber == 2) {
+            else if (dataNumber === 2) {
                 data=data2;
             }
-            else if (dataNumber == 3) {
+            else if (dataNumber === 3) {
                 data=data3;
             }
-            else if (dataNumber == 4) {
+            else if (dataNumber === 4) {
                 data=data4;
             }
             else {
@@ -64,7 +64,7 @@ const BarChart = () => (
                 tickRotation: 0,
                 legend: 'Total Expiration Date Volume',
                 legendPosition: 'middle',
-                legendOffset: -40
+                legendOffset: -43
             }}
             labelSkipWidth={20}
             labelSkipHeight={12}

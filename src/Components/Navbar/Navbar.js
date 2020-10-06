@@ -2,7 +2,7 @@ import React from 'react'
 import './Navbar.css'
 /* import ToggleButton from '../Sidebar/ToggleButton'; */
 import profileImage from './user1.png';
-import { Dropdown, CustomToggle } from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 
 const Navbar = props => (
 

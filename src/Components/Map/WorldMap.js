@@ -9,7 +9,7 @@ import {
   InfoWindow
 } from "react-google-maps";
 import * as MapData from "./Mapdata.json";
-import MyProvider, { MyContext } from "../../MyProvider";
+import { MyContext } from "../../MyProvider";
 //import mapStyles from "./mapStyles";
 
 function Map() {
@@ -44,9 +44,12 @@ function Map() {
                   lat: AC.coordinates[0],
                   lng: AC.coordinates[1]
                 }}
-                onClick={() => {
+                onMouseOver={() => {
                   setSelectedPark(AC);
                 }}
+                /* onMouseOut={() => {
+                  setSelectedPark(null);
+                }} */
                 icon={{
                   url: AC.iconurl,
                   scaledSize: new window.google.maps.Size(25, 25)
@@ -60,15 +63,16 @@ function Map() {
                   onCloseClick={() => {
                     setSelectedPark(null);
                   }}
+                  
                   position={{
-                    lat: selectedPark.coordinates[0],
+                    lat: selectedPark.coordinates[0]+11,
                     lng: selectedPark.coordinates[1],
                   }}
                 >
                   <div>
-                    {console.log(context.state)}
-                    {console.log(context.increment)}
-                    <a value={selectedPark.name} onClick={() => context.increment(selectedPark.name)} style={{ cursor: 'pointer' }} className="ACLink"><div>{selectedPark.name}</div></a>
+                   {/*  {console.log(context.state)}
+                    {console.log(context.increment)} */}
+                    <a value={selectedPark.name} onClick={() => context.increment(selectedPark.name)} ><div className="ACLink">{selectedPark.name}</div></a>
                     <p>{selectedPark.description}</p>
                   </div>
                 </InfoWindow>
@@ -84,9 +88,9 @@ const MapWrapped = withScriptjs(withGoogleMap(Map));
 
 export default function WorldMap() {
   return (
-    <div style={{ width: "100%", height: "270px" }}>
+    <div style={{ width: "100%", height: "320px" }}>
       <MapWrapped
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDMVtICVlllbzey02Wi-iR0vY_a4SRDdhc&callback=initMap`}
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDMVtICVlllbzey02Wi-iR0vY_a4SRDdhc`} /* "&callback=initMap" : I removed this from end of the url string for removing some error. */
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `100%` }} />}
         mapElement={<div style={{ height: `100%` }} />}

@@ -6,20 +6,48 @@ import { Card } from 'react-bootstrap';
 
 
 
-const PieChart = (props) => (
+const PieChart = (props) => {
+    let legend = [];
+    if(props.legend === true) {
+        legend = [
+            {
+                anchor: 'right',
+                direction: 'column',
+                translateY: 55,
+                translateX: -30,
+                itemWidth: 130,
+                itemHeight: 22,
+                itemTextColor: '#999',
+                symbolSize: 13,
+                symbolShape: 'square',
+                effects: [
+                    {
+                        on: 'hover',
+                        style: {
+                            itemTextColor: '#000'
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    
+    return (
+    <div style={{ height: '240px', width: '100%' }}>
     <ResponsivePie
         data={data.parts}
-        margin={{ top: 10, right: 0, bottom: 10, left: 0 }}
-        itemHeight={250}
+        margin={{ top: 10, right: 0, bottom: 15, left: 0 }}
+        itemHeight={240}
         itemWidth={'100%'}
         sortByValue={false}
         innerRadius={0.55}
         padAngle={3}
-        fit={false}
+        fit={true}
         colors={['#f2bb43','#967bdb', '#a5a5a5',  '#57afd8', '#8cc151']}
         borderWidth={1}
         borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
-        enableRadialLabels={false}
+        enableRadialLabels={props.enableRadialLabels}
+        radialLabel={function(e){return e.id}}
         radialLabelsSkipAngle={10}
         radialLabelsTextXOffset={6}
         radialLabelsTextColor="#333333"
@@ -47,27 +75,9 @@ const PieChart = (props) => (
                 </Card>
                /*  {console.log(tooltipdata.data)} */
         }}
-        /* legends={[
-            {
-                anchor: 'right',
-                direction: 'row',
-                translateY: 56,
-                itemWidth: 100,
-                itemHeight: 18,
-                itemTextColor: '#999',
-                symbolSize: 18,
-                symbolShape: 'circle',
-                effects: [
-                    {
-                        on: 'hover',
-                        style: {
-                            itemTextColor: '#000'
-                        }
-                    }
-                ]
-            }
-        ]} */
+        legends={legend}
     />
-)
+</div>
+)}
 
 export default PieChart;

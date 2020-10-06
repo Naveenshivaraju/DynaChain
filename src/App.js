@@ -5,9 +5,8 @@ import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import Footer from './Components/Footer/Footer'
 import WorldMap from './Components/Map/WorldMap'
-import ACProgressChart from './Components/ACProgressChart/ACProgressChart'
-import ACCard from './Components/ACCard/ACCard'
-import DynaTower from './DynaTower.json'
+/* import ACProgressChart from './Components/ACProgressChart/ACProgressChart'
+import ACCard from './Components/ACCard/ACCard' */
 import BarChart from './Components/BarChart/BarChart';
 import TreeMap1 from './Components/TreeMap1/TreeMap1';
 import BarChart2 from './Components/Barchart2/BarChart2';
@@ -17,12 +16,10 @@ import CustomerBar from './Components/CustomerBar/CustomerBar'
 import PieChart2 from './Components/PieChart2/PieChart2'
 import PieChart3 from './Components/PieChart3/PieChart3'
 import MyProvider from './MyProvider'
-import BarModel from './Components/Model/BarModel'
-import TreeMapModel from './Components/Model/treeMapModel'
-import MapLegend from './Components/Map/MapLegend'
 import PieChart5 from './Components/PieChart5/PieChart5'
 import PieChart4 from './Components/PieChart4/PieChart4'
 import InvHeader from './Components/InvHeader/InvHeader'
+import Modal from './Components/Modal/CustomModal';
 
 
 
@@ -63,19 +60,6 @@ export class App extends Component {
     })
   }
 
-  nextAC = () => {
-    const newIndex = this.state.index + 4;
-    this.setState({
-      index: newIndex
-    })
-  }
-
-  prevAC = () => {
-    const newIndex = this.state.index - 4;
-    this.setState({
-      index: newIndex
-    })
-  }
 
   render() {
 
@@ -96,7 +80,6 @@ export class App extends Component {
           <Router>
             <div className={wrapperDiv}>
               <div className="overlay"></div>
-             {/*  {sideBar} */}
               <div className={pageContentDiv}>
                 <div className="content">
                   <div className="container-fluid p-0 px-lg-0">
@@ -112,7 +95,7 @@ export class App extends Component {
                         <div className="card">
                           <div className="map-card">
                             <WorldMap />
-                            <MapLegend />
+                            {/*  <MapLegend /> */}
                           </div>
                         </div>
                       </div>
@@ -128,7 +111,12 @@ export class App extends Component {
                                   <div className="graph-heading">Inventory Quality</div>
                                 </div>
                                 <div className="col-sm-2">
-                                  <TreeMapModel />
+                                  {/*  <TreeMapModel /> */}
+                                  <Modal
+                                    modalTitle="Inventory Obsolescence"
+                                    modalBody={<TreeMap1 />}
+                                    size="lg"
+                                  />
                                 </div>
                               </div>
                             </div>
@@ -142,7 +130,10 @@ export class App extends Component {
                                   <div className="graph-heading">Inventory Obsolescence</div>
                                 </div>
                                 <div className="col-sm-2">
-                                  <BarModel />
+                                  <Modal
+                                    modalTitle={"Inventory Obsolescence"}
+                                    modalBody={<BarChart />}
+                                    size="lg" />
                                 </div>
                               </div>
                             </div>
@@ -177,7 +168,9 @@ export class App extends Component {
                       <div className="col-sm-6">
                         <div className="card">
                           <div className="card-body" style={{ paddingTop: '6px', paddingBottom: '6px' }}>
-                            <h5 className="" style={{ textAlign: 'center', margin: '0px' }}>Top 5 Inventories Info</h5>
+                            <h5 className="" style={{ textAlign: 'center', margin: '0px' }}>
+                              Top 5 Inventories Info
+                            </h5>
                           </div>
                         </div>
                       </div>
@@ -197,21 +190,50 @@ export class App extends Component {
                           <div className="col-sm-6" style={{ paddingRight: '7px' }}>
                             <div className="card smallcard">
                               <div className="card-body">
-                                <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
-                                  Top 5 BU Inventories Mtn (By Balance)
+
+                                <div className="row">
+
+                                  <div className="col-sm-10">
+                                    <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
+                                      Top 5 BU Inventories Mtn (By Balance)
+                                  </div>
+                                  </div>
+                                  <div className="col-sm-2">
+                                    <Modal
+                                      modalTitle="Top 5 BU Inventories Mtn (By Balance)"
+                                      modalBody={<BarChart2 />}
+                                      size='lg'
+                                    />
+                                  </div>
                                 </div>
-                                <BarChart2 />
+                                <div className="row">
+                                  <BarChart2 />
+                                </div>
                               </div>
                             </div>
                           </div>
                           <div className="col-sm-6" style={{ paddingLeft: '7px' }}>
                             <div className="card smallcard">
                               <div className="card-body">
-                                <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
-                                  Top 5 BU % of Inventories
+                                <div className="row">
+                                  <div className="col-sm-2">
                                   </div>
-                                <div style={{ height: '232px', width: '100%' }}>
-                                  <PieChart />
+                                  <div className="col-sm-8">
+                                    <div className="card-title mb-4" style={{ textAlign: 'left', fontSize: '15px', fontWeight: '400px' }}>
+                                      Top 5 BU % of Inventories
+                                  </div>
+                                  </div>
+                                  <div className="col-sm-2">
+                                    <Modal
+                                      modalTitle="Top 5 BU % of Inventories"
+                                      modalBody={<PieChart legend={true} enableRadialLabels={true} />}
+                                      size='lg'
+                                    />
+                                  </div>
+                                </div>
+
+                                <div className="row" >
+                                  <PieChart legend={false} enableRadialLabels={false} />
                                 </div>
                               </div>
                             </div>
@@ -225,11 +247,25 @@ export class App extends Component {
                           <div className="col-sm-6" style={{ paddingRight: '7px' }}>
                             <div className="card smallcard">
                               <div className="card-body">
-                                <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
-                                  Total Inventory (Mtn)
+                                <div className="row">
+                                  <div className="col-sm-2">
                                   </div>
-                                <div style={{ height: '232px', width: '100%' }}>
-                                  <PieChart2 />
+                                  <div className="col-sm-8">
+                                    <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
+                                      Total Inventory (Mtn)
+                                  </div>
+                                  </div>
+                                  <div className="col-sm-2">
+                                    <Modal
+                                      modalTitle="Total Inventory (Mtn)"
+                                      modalBody={<PieChart2 legend={true} enableRadialLabels={true} />}
+                                      size='lg'
+                                    />
+                                  </div>
+                                </div>
+
+                                <div className="row" >
+                                  <PieChart2 legend={false} enableRadialLabels={false} />
                                 </div>
                               </div>
                             </div>
@@ -237,11 +273,25 @@ export class App extends Component {
                           <div className="col-sm-6" style={{ paddingLeft: '7px' }}>
                             <div className="card smallcard">
                               <div className="card-body">
-                                <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
-                                  Inventory Cost
+                                <div className="row">
+                                  <div className="col-sm-2">
                                   </div>
-                                <div style={{ height: '232px', width: '100%' }}>
-                                  <PieChart3 />
+                                  <div className="col-sm-8">
+                                    <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
+                                      Inventory Cost
+                                  </div>
+                                  </div>
+                                  <div className="col-sm-2">
+                                    <Modal
+                                      modalTitle="Inventory Cost"
+                                      modalBody={<PieChart3 legend={true} enableRadialLabels={true} />}
+                                      size='lg'
+                                    />
+                                  </div>
+                                </div>
+
+                                <div className="row" >
+                                  <PieChart3 legend={false} enableRadialLabels={false} />
                                 </div>
                               </div>
                             </div>
@@ -256,24 +306,52 @@ export class App extends Component {
                           <div className="col-sm-6" style={{ paddingRight: '7px' }}>
                             <div className="card smallcard">
                               <div className="card-body">
-                                <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
-                                  Top 10 Products​ (Sales)
+                                <div className="row">
+                                  <div className="col-sm-2">
                                   </div>
-                                <div style={{ display: 'flex', overflowX: 'scroll', overflowY: 'scroll', height: '450px' }}>
-                                  <ProductBar />
+                                  <div className="col-sm-8">
+                                    <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px', zIndex: '1' }}>
+                                      Top 10 Products (Sales)
+                                  </div>
+                                  </div>
+                                  <div className="col-sm-2" style={{ zIndex: '1' }}>
+                                    <Modal
+                                      modalTitle="Top 10 Products (Sales)"
+                                      modalBody={<ProductBar />}
+                                      size='lg'
+                                    />
+                                  </div>
                                 </div>
+
+                                {/* <div className="row"> */}
+                                <ProductBar />
+                                {/* </div> */}
                               </div>
                             </div>
                           </div>
                           <div className="col-sm-6" style={{ paddingLeft: '7px' }}>
                             <div className="card smallcard">
-                              <div className="card-body">
-                                <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
-                                  Top 10 Customers​ (Sales)
+                            <div className="card-body">
+                                <div className="row">
+                                  <div className="col-sm-2">
                                   </div>
-                                <div style={{ display: 'flex', overflowX: 'scroll', overflowY: 'scroll', height: '450px' }}>
-                                  <CustomerBar />
+                                  <div className="col-sm-8">
+                                    <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px', zIndex: '1' }}>
+                                      Top 10 Customers (Sales)
+                                  </div>
+                                  </div>
+                                  <div className="col-sm-2" style={{ zIndex: '1' }}>
+                                    <Modal
+                                      modalTitle="Top 10 Customers (Sales)"
+                                      modalBody={<CustomerBar />}
+                                      size='lg'
+                                    />
+                                  </div>
                                 </div>
+
+                                {/* <div className="row"> */}
+                                <CustomerBar />
+                                {/* </div> */}
                               </div>
                             </div>
                           </div>
@@ -281,6 +359,7 @@ export class App extends Component {
                       </div>
 
                       <div className="col-sm-6">
+
                         <div className="card">
                           <div className="card-body">
                             <div className="row">
@@ -309,27 +388,56 @@ export class App extends Component {
                         </div>
 
 
-                        <div className="row">
+                        <div className="row" style={{ paddingRight: '8px' }}>
                           <div className="col-sm-6" style={{ paddingRight: '7px' }}>
                             <div className="card smallcard">
                               <div className="card-body">
-                                <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
-                                  Total Value ($)
+                                <div className="row">
+                                  <div className="col-sm-2">
                                   </div>
-                                <div style={{ height: '232px', width: '100%' }}>
-                                  <PieChart4 />
+                                  <div className="col-sm-8">
+                                    <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
+                                      Total Value ($)
+                                  </div>
+                                  </div>
+                                  <div className="col-sm-2">
+                                    <Modal
+                                      modalTitle="Total Value ($)"
+                                      modalBody={<PieChart4 legend={true} enableRadialLabels={true} />}
+                                      size='lg'
+                                    />
+                                  </div>
+                                </div>
+
+                                <div className="row" >
+                                  <PieChart4 legend={false} enableRadialLabels={false} />
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div className="col-sm-6" style={{ paddingLeft: '7px' }}>
+
+                          <div className="col-sm-6" style={{ paddingRight: '7px' }}>
                             <div className="card smallcard">
                               <div className="card-body">
-                                <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
-                                  Inventory Turns
+                                <div className="row">
+                                  <div className="col-sm-2">
                                   </div>
-                                <div style={{ height: '232px', width: '100%' }}>
-                                  <PieChart5 />
+                                  <div className="col-sm-8">
+                                    <div className="card-title mb-4" style={{ textAlign: 'center', fontSize: '15px', fontWeight: '400px' }}>
+                                      Inventory Turns
+                                  </div>
+                                  </div>
+                                  <div className="col-sm-2">
+                                    <Modal
+                                      modalTitle="Inventory Turns"
+                                      modalBody={<PieChart5 legend={true} cx={360} cy={120} />}
+                                      size='lg'
+                                    />
+                                  </div>
+                                </div>
+
+                                <div className="row" >
+                                  <PieChart5 legend={false} cx={155} cy={120} />
                                 </div>
                               </div>
                             </div>

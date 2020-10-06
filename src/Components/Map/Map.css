@@ -1,12 +1,12 @@
 .ACLink {
     font-size: 16px;
     font-weight: 500;
-    color: #b3b3b3;
+    color: #5a5c69;
     margin: 5px 0px 0px 0px;
     padding: 0px;
+    cursor: pointer;
 }
 
-a.ACLink:hover {
-    color: black;
-    opacity: 0.7;
+.ACLink:hover {
+    color: #417bff;
 }

@@ -5,20 +5,51 @@ import { Card } from 'react-bootstrap';
 
 
 
-const PieChart2 = () => (
+const PieChart2 = (props) => {
+    
+    let legend = [];
+    if(props.legend === true) {
+        legend = [
+            {
+                anchor: 'right',
+                direction: 'column',
+                translateY: 55,
+                translateX: -30,
+                itemWidth: 130,
+                itemHeight: 22,
+                itemTextColor: '#999',
+                symbolSize: 13,
+                symbolShape: 'square',
+                effects: [
+                    {
+                        on: 'hover',
+                        style: {
+                            itemTextColor: '#000'
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    
+    
+    return (
+    <div style={{ height: '240px', width: '100%' }}>
     <ResponsivePie
         data={data.parts}
-        margin={{ top: 10, right: 0, bottom: 10, left: 0 }}
-        itemHeight={250}
+        margin={{ top: 10, right: 0, bottom: 15, left: 0 }}
+        itemHeight={240}
         itemWidth={'100%'}
         sortByValue={false}
         innerRadius={0.60}
+        cornerRadius={0}
         padAngle={0}
         fit={false}
         colors={["#60c49f", '#f2bb23', '#eb7f3e', '#4788fe']}
         borderWidth={1}
         borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
-        enableRadialLabels={false}
+        enableRadialLabels={props.enableRadialLabels}
+        radialLabel={function(e){return e.id}}
         radialLabelsSkipAngle={10}
         radialLabelsTextXOffset={6}
         radialLabelsTextColor="#333333"
@@ -27,7 +58,7 @@ const PieChart2 = () => (
         radialLabelsLinkHorizontalLength={24}
         radialLabelsLinkStrokeWidth={1}
         radialLabelsLinkColor={{ from: 'color' }}
-        sliceLabel={function(e){return e.label}}
+        sliceLabel={function(e){return e.quantity}}
         slicesLabelsSkipAngle={10}
         slicesLabelsTextColor="#333333"
         animate={true}
@@ -40,14 +71,16 @@ const PieChart2 = () => (
                     <Card.Body>
                         <Card.Title>Quantity: {tooltipdata.value} Mtn</Card.Title>
                         <Card.Text>
-                            <span>Pct (%): {tooltipdata.labelValue}</span><br/>
+                           {/*  <span>Pct (%): {tooltipdata.labelValue}</span><br/> */}
                         </Card.Text>
                     </Card.Body>
                 </Card>
                /*  {console.log(tooltipdata.data)} */
         }}
-        
+        legends = {legend}
     />
+    </div>
 )
+    }
 
 export default PieChart2;

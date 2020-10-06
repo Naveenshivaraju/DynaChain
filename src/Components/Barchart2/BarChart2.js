@@ -7,7 +7,7 @@ function BarChart2() {
     <>
       <Chart
         width={'100%'}
-        height={'250px'}
+        height={'218px'}
         chartType="BarChart"
         loader={<div>Loading Chart</div>}
         data={[
@@ -17,8 +17,6 @@ function BarChart2() {
         options={{
           /* title: 'Top 5 BU Inventories MTn (By Balance)', */
           titleTextStyle: { color: 'black', fontSize: 13 },
-          width: 280,
-          height: 250,
           bar: { groupWidth: '80%' },
           colors: ['#f2bb43','#967bdb', '#a5a5a5',  '#57afd8', '#8cc151'],
           legend: {
@@ -38,7 +36,7 @@ function BarChart2() {
             },
             ticks: [0, 1000, 2000, 3000, 4000, 5000],
             titleTextStyle: {
-              fontSize: 13,
+              fontSize: 12,
               fontName: 'Roboto',
               bold: true,
               italic:false
@@ -48,7 +46,7 @@ function BarChart2() {
           /*   title: 'Date(Mon DD, YY)', */
             gridlines: { color: '#333', minSpacing: 10 },
             textStyle: {
-              fontSize: 13,
+              fontSize: 12,
               fontName: 'Roboto',
               bold: true,
               italic:false

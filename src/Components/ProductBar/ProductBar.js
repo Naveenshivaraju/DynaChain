@@ -7,7 +7,7 @@ function ProductBar() {
         <>
             <Chart
                 width={'100%'}
-                height={'450px'}
+                height={'380px'}
                 chartType="BarChart"
                 loader={<div>Loading Chart</div>}
                 data={[
@@ -25,7 +25,8 @@ function ProductBar() {
                 ]}
 
                 options={{
-
+                   /*  title: 'Top 10 Products (Sales) my nam ei is roit jbs c',
+                    titleTextStyle: {fontSize:14}, */
                     hAxis: {
                         title: 'Sales',
                         minValue: 0,
@@ -33,7 +34,7 @@ function ProductBar() {
                           fontSize: 12,
                           fontName: 'Roboto'
                         },
-                        ticks: [0, 200000, 400000, 600000, 800000, 1000000,],
+                        ticks: [0, 200000, 400000, 600000, 800000, 1000000],
                         titleTextStyle: {
                           fontSize: 14,
                           fontName: 'Roboto',
@@ -41,17 +42,17 @@ function ProductBar() {
                           italic:false
                         }
                       },
-                      vAxis: {
-                        minValue: 0,
-                        textStyle: {
-                          fontSize: 10,
-                          fontName: 'Roboto'
-                        },
+                    vAxis: {
+                      minValue: 0,
+                      textStyle: {
+                        fontSize: 12,
+                        fontName: 'Roboto'
                       },
-                    width: 360,
-                    height: 450,
-                    bar: { groupWidth: '80%' },
-                    legend: {position: 'top', textStyle: {color: '#4e8ad9', fontSize: 12}},
+                    },
+                   /*  width: 300,
+                    height: 380, */
+                    bar: { groupWidth: '85%' },
+                    legend: {position: 'top', textStyle: {color: '#4e8ad9', fontSize: 12}, alignment: 'end'},
                     annotations: {alwaysOutside:true},
                 }}
 

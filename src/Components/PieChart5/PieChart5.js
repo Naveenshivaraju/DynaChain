@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
-import { RadialBarChart, RadialBar, Tooltip } from 'recharts';
+import { RadialBarChart, RadialBar, Tooltip, Legend } from 'recharts';
 import { Card } from 'react-bootstrap';
+import './PieChart5.css';
 
 
 const data = [
@@ -19,11 +20,11 @@ const data = [
 ];
 
 const style = {
-  top: 0,
-  left: 150,
-  lineHeight: '30px',
+  top: 130,
+  left: 510,
+  lineHeight: '24px',
+  fontSize:'13px',
 };
-
 
 /* const getIntroOfPage = (label) => {
   if (label === 'Sheet ingots​') {
@@ -42,7 +43,7 @@ const CustomTooltip = ({ active, payload, label }) => {
     return (
 
       <div style={{marginTop:'100px'}}>
-      <Card className="custom-tooltip" style={{ width: '12rem', border: `1px solid ${payload[0].payload.fill}` ,padding:'12px',paddingTop:'8px'}}>
+      <Card className="custom-tooltip" style={{ width: '12rem', border: `1px solid ${payload[0].payload.fill}` ,padding:'10px',paddingTop:'6px'}}>
         <Card.Header style={{ backgroundColor: payload[0].payload.fill + '' }} >{payload[0].payload.name}</Card.Header>
         <Card.Body>
           <Card.Title>Value: {payload[0].payload.value}</Card.Title>
@@ -52,19 +53,6 @@ const CustomTooltip = ({ active, payload, label }) => {
         </Card.Body>
       </Card>
       </div>
-
-
-
-
-
-
-
-      /*   <div className="custom-tooltip" style={{backgroundColor:'white', color:'red'}}>
-          {console.log(payload)}
-          <p className="label">{`${payload[0].payload.name}`}</p>
-          <p >{getIntroOfPage(payload[0].payload.name)}</p>
-        </div>
- */
     );
   }
 
@@ -72,24 +60,34 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 
+let legend=false;
 export default class PieChart5 extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/9km41z5z/';
 
+  
   render() {
+    if(this.props.legend === true)
+    {
+      legend = <Legend iconSize={10} width={200} height={120} layout="vertical" verticalAlign="left" wrapperStyle={style} />
+    }
     return (
       <RadialBarChart
-        width={400}
-        height={232}
-        cx={150} cy={114}
+        width={800}  /* 400 800 */
+        height={240}
+        cx={this.props.cx} cy={this.props.cy}/* 155 114  | 300 120*/
         innerRadius={30}
         outerRadius={120}
-        barSize={30}
+        barSize={25}
         data={data}
         startAngle={90}
         endAngle={-360}
       >
         <RadialBar
-          minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise={true} dataKey="value" />
+          minAngle={15}
+          label={{ position: 'insideStart', fill: 'black', offset: 2 }} 
+          background clockWise={true} dataKey="value" 
+          />
+          {legend}
         <Tooltip content={<CustomTooltip />} />
       </RadialBarChart>
     );

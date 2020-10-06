@@ -2,35 +2,31 @@
     "parts" : [
         {
           "id": "Sheet ingots",
-          "label": "57 Mtn",
+          "label": "Sheet ingots",
+          "cost":"$43 M",
           "value": 43,
-          "color": "#60c49f",
-          "labelValue" : "16%",
-          "cost":"$ 72M"
+          "color": "#60c49f"
         },
         {
           "id": "Extrusion ingots",
-          "label": "43 Mtn",
+          "label": "Extrusion ingots",
+          "cost":"$50 M",
           "value": 50,
-          "color": "#f2bb23",
-          "labelValue" : "17.4%",
-          "cost":"$ 72M"
+          "color": "#f2bb23"          
         },
         {
           "id": "Wire rod",
-          "label": "22 Mtn",
+          "label": "Wire rod",
+          "cost":"$67 M",
           "value": 67,
-          "color": "#eb7f3e",
-          "labelValue" : "53%",
-          "cost":"$ 72M"
+          "color": "#eb7f3e"
         },
         {
           "id": "Primary foundry alloys",
-          "label": "160 Mtn",
-          "value": 103,
-          "color": "#4788fe",
-          "labelValue" : "26.4%",
-          "cost":"$ 72M"
+          "label": "Primary foundry alloys",
+          "cost":"$72 M",
+          "value": 72,
+          "color": "#4788fe"          
         }
     ]
 }
