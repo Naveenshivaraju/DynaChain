@@ -1,0 +1,23 @@
+.upicon_show {
+    visibility: visible;
+}
+
+.upicon_hide {
+    display:none;
+}
+
+.upicon_link {
+    cursor: pointer;
+}
+
+.upicon_link :hover {
+ color:#417bff;
+}
+
+.upicon_tooltip_hide {
+    display: none;
+}
+
+.upicon_tooltip_show {
+    display: block;
+}

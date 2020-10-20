@@ -1,0 +1,44 @@
+.confidence-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+}
+.confidence-block .ULHeader{
+    display: flex;
+    flex-direction: row;
+}
+
+/* .LU-block{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+} */
+
+/* .LU-block-element {
+    justify-content: center;
+}
+ */
+
+ .confidence-block-element {
+     display: flex;
+    justify-content: center;
+ }
+
+ .UL-block-element {
+    display: flex;
+    justify-content: center;
+ }
+
+ .padded-card {
+     padding-left: 0px;
+     padding-right: 0px;
+ }
+ 
+ .UL-info-card {
+     margin-top: 10px;
+     border: 1px solid royalblue;
+     width: 7.5rem;
+     height: 7rem;
+ }

@@ -1,0 +1,107 @@
+{
+    "data":  [
+        [
+            "Brand",
+            "Parent",
+            "Total Units",
+            "Market increase/decrease (color)"
+        ],
+    
+        ["Inventory Status", null, 0, 0],
+        ["Excess", "Inventory Status", 0, 0],
+        ["Slow Moving", "Inventory Status", 0, 0],
+        ["Active", "Inventory Status", 0, 0],
+        ["Obsolete", "Inventory Status", 0, 0],
+    
+        ["E: Rural", "Excess", 90, 0],
+        ["E: Natura", "Excess", 60, 0],
+        ["E: Fama", "Excess", 20, 0],
+        ["E: Abbas", "Excess", 23, 0],
+        ["E: Aliqui", "Excess", 70, 0],
+        ["E: Victoia", "Excess", 11, 0],
+        ["E: Pirum", "Excess", 10, 0],
+        ["E: Currus", "Excess", 6, 0],
+        
+    
+    
+        ["SM: Rural", "Slow Moving", 35, -255],
+        ["SM: Aliqui", "Slow Moving", 20, -255],
+        ["SM: Pirum", "Slow Moving", 73, -255],
+        ["SM: Quibus", "Slow Moving", 68, -255],
+        ["SM: Currus", "Slow Moving", 10, -255],
+        ["SM: Fama", "Slow Moving", 91, -255],
+        ["SM: Natura", "Slow Moving", 20, -255],
+    
+    
+    
+        ["A: Quibus", "Active", 171, 125],
+        ["A: Natura", "Active", 100, 125],
+        ["A: Abbas", "Active", 13, 125],
+        ["A: Pirum", "Active", 48, 125],
+        ["A: Currus", "Active",62, 125],
+        ["A: Aliqui", "Active", 27, 125],
+    
+    
+    
+        ["O: Pomum", "Obsolete", 30, 255],
+        ["O: Natura", "Obsolete", 4, 255],
+        ["O: Aliqui", "Obsolete", 2, 255],
+        ["O: Salvus", "Obsolete", 10, 255],
+        ["O: Currus", "Obsolete", 15, 255]
+    ],
+
+    "tooltip_data": [
+
+        [
+            "Brand",
+            "Total Units",
+            "Avg. Unit Cost",
+            "Total Cost",
+            "Six Months Projected Demand",
+            "Six Months History Demand"
+        ],
+    
+        ["Inventory By Status",0, 0, 0, 0,0],
+        ["Excess","17,302", "386", "52,058,202", "0","0"],
+        ["Slow Moving","22,320", "255", "39,885,804", "5,400","0"],
+        ["Active","11,607", "248", "17,282,823", "11,102","36,094"],
+        ["Obsolete","9,201", "146", "9,237,504", 0,0],
+    
+        ["E: Rural", "1,557", "401", "6,938,102", 0, 0],
+        ["E: Natura", "3,460", "329", "5,692,358", 0, 0],
+        ["E: Fama",  "1,730", "375", "6,488,250", 0, 0],
+        ["E: Abbas", "2,076", "310", "5,363,620", 0, 0],
+        ["E: Aliqui",  "2,595", "298", "5,155,996", 0, 0],
+        ["E: Victoia", "1,730", "390", "6,747,780", 0, 0],
+        ["E: Pirum",  "3,287", "360", "6,228,720", 0, 0],
+        ["E: Currus",  "865", "4688", "8,443,376", 0, 0],
+        
+    
+    
+        ["SM: Rural", "2,455", "270", "6,026,400", 0, 0],
+        ["SM: Aliqui",  "2,902", "265", "5,194,800", 0, 0],
+        ["SM: Pirum",   "2,323", "245"," 5,468,400", 0, 0],
+        ["SM: Quibus",  "4,687", "250", "5,580,000", 0, 0],
+        ["SM: Currus", "1,116", "257", "5,736,240", 0, 0],
+        ["SM: Fama", "5,580", "255", "5,691,600", 0, 0],
+        ["SM: Natura",  "3,348", "245", "5,468,400", 0, 0],
+    
+    
+    
+        ["A: Quibus",  "2,595", "368", "6,367,136", 0],
+        ["A: Natura", "1,730"," 368", "6,367,136", 0],
+        ["A: Abbas",  "1,557", "368", "6,367,136", 0],
+        ["A: Pirum",  "1,730", "368", "6,367,136", 0],
+        ["A: Currus",  "2,768","368"," 6,367,136", 0],
+        ["A: Aliqui", "6,921", "368"," 6,367,136", 0],
+    
+    
+    
+        ["O: Pomum",   "3,608", "146", "1,317,066", 0, 0],
+        ["O: Natura", "1,804", "163", "1,470,423", 0, 0],
+        ["O: Aliqui", "2,255", "160", "1,443,360", 0, 0],
+        ["O: Salvus",  "902", "100", "902,100", 0, 0],
+        ["O: Currus",  "451", "150", "1,353,150", 0, 0]
+    ]
+    
+}

@@ -4,13 +4,12 @@ import './Footer.css'
 function Footer() {
     return (
         <>
-            <footer className="footer">
+            <footer className="footer position-relative">
                 <div className="container-fluid">
                   <div className="row text-muted">
                     <div className="col-6 text-left">
                       <p className="mb-0">
-                        <a href="#" className="text-muted">Copyright &copy; 2020 Tata Consultancy Services
-                                    </a>
+                        <a href="#" className="text-muted">Copyright &copy; 2020 Tata Consultancy Services</a>
                       </p>
                     </div>
                     <div className="col-6 text-right">

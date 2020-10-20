@@ -7,6 +7,10 @@ footer.footer {
     padding: 1rem .875rem;
     direction: ltr;
     background: #fff;
+    /* position: absolute !important;
+    bottom: 0px;
+    left: 0px;
+    right: 0px; */
   }
   
   footer.footer ul {

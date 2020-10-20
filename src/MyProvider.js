@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Sidebar from './Components/Sidebar/Sidebar';
 
 
 //make a new context
@@ -7,42 +8,68 @@ export const MyContext = React.createContext();
 //create a provider component
 class MyProvider extends Component {
     state = {
-        name: 'Rohit',
-        dataNumber: 1,
-        cityname: 'Inventory',
-        upicon: 'upicon_hide'
+        wrapperDiv: 'wrapper',
+        pageContentDiv: 'page-content-wrapper',
+        isOpen: '',
+        sideBarOpen: false,
+        sideBar: null
     }
-
 
 
     render() {
         return (
             <MyContext.Provider value={{
                 state: this.state,
-                increment: (cname) => {
+                toggleButtonClickHandler: () => {
 
-                    this.setState({
-                        dataNumber: this.state.dataNumber + 1,
-                        cityname: cname,
-                        upicon: 'upicon_show'
-                    })
+                    let new_isOpen = '';
+                    let new_sideBar = null;
+                    let new_wrapper = "wrapper";
+                    let new_pageContentDiv = 'page-content-wrapper';
 
-
-                    if (this.state.dataNumber === 6) {
-                        this.setState({
-                            dataNumber: 2
-                        })
+                    if (this.state.isOpen === '') {
+                        new_isOpen = 'open';
                     }
-                },
+                    else {
+                        new_isOpen = '';
+                    }
 
-                upiconClick: () => {
+                    if (this.state.sideBar === null) {
+                        new_sideBar = <Sidebar />;
+                    }
+                    else {
+                        new_sideBar = null;
+                    }
+
+
+                    if (this.state.wrapperDiv === 'wrapper') {
+                        new_wrapper = 'wrapper-active'
+                    }
+                    else {
+                        new_wrapper = 'wrapper'
+                    }
+
+
+                    if (this.state.pageContentDiv === 'page-content-wrapper') {
+                        new_pageContentDiv = 'page-content-wrapper-active'
+                    }
+                    else {
+                        new_pageContentDiv = 'page-content-wrapper'
+                    }
+
+
                     this.setState({
-                        cityname:'Inventory',
-                        dataNumber: 1,
-                        upicon: 'upicon_hide'
+                        sideBar: new_sideBar,
+                        isOpen: new_isOpen,
+                        wrapperDiv: new_wrapper,
+                        pageContentDiv: new_pageContentDiv,
+                    })
+
+                    this.setState((prevState) => {
+                        console.log("Event occured and method ran.");
+                        return { sideBarOpen: !prevState.sideBarOpen };
                     })
                 },
-
             }}>
                 {this.props.children}
             </MyContext.Provider>

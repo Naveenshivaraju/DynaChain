@@ -1,0 +1,19 @@
+
+
+.wrapper-active {
+  position: absolute;
+  transition: all 0.5s ease;
+  width:100%;
+  }
+  
+.page-content-wrapper {
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.page-content-wrapper-active {
+  width: calc(100% - 270px);
+  /* min-width: 992px; */
+  margin-left: 270px;
+  transition: all 0.5s ease;
+}
