@@ -18,7 +18,7 @@ render() {
                                 <div className="content">
                                     <div className="container-fluid p-0 px-lg-0">
                                         <Navbar sideBarClickHandler={context.toggleButtonClickHandler} isOpen={context.state.isOpen} />
-                                        <h1 className="center">Home Page</h1>
+                                        <h1 className="center"><i className="fas fa-chart-bar"></i> Home Page</h1>
                                     </div>
                                 </div>
                                 <Footer />

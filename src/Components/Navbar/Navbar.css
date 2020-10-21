@@ -14,6 +14,7 @@ header navbar design
     padding: 0px;
     background-color: white;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .16);
+    width: 100%;
   }
   
   .text-gray-600 {
@@ -120,4 +121,11 @@ header navbar design
 
   #dropdown-custom-components:hover {
     opacity: 1;
+  }
+
+  .sticky-nav {
+    position:-webkit-sticky;
+    position:sticky;
+    top:0;
+    z-index: 1;
   }

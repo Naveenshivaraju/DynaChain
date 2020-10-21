@@ -12,8 +12,8 @@ export class Navbar extends Component {
       <MyContext.Consumer>
         {
           (context) => (
-            <>
-              <nav className="navbar navbar-expand navbar-light my-navbar" >
+            <div className="sticky-nav container-fluid p-0 px-lg-0 ">
+              <nav className="navbar navbar-expand navbar-light my-navbar">
                 <ToggleButton click={context.toggleButtonClickHandler} isOpen={context.state.isOpen} />
                 <h1 className="h3 mb-0 text-gray-800 brand">Cognitive Control Tower</h1>
 
@@ -42,7 +42,7 @@ export class Navbar extends Component {
                   </li>
                 </ul>
               </nav>
-            </>
+            </div>
           )}
       </MyContext.Consumer>
     )

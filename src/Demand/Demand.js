@@ -24,9 +24,9 @@ function Demand() {
                                 {context.state.sideBar}
                                 <div className={context.state.pageContentDiv}>
                                     <div className="content">
-                                        <div className="container-fluid p-0 px-lg-0">
+                                       {/*  <div className="container-fluid p-0 px-lg-0"> */}
                                             <Navbar sideBarClickHandler={context.toggleButtonClickHandler} isOpen={context.state.isOpen} />
-                                        </div>
+                                       {/*  </div> */}
 										<Container fluid>
 											<div className="demand-header">
 												<DemandHeader />

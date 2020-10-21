@@ -45,7 +45,8 @@ class AdjustedDemand extends Component {
                 chart: {
                     height: 350,
                     type: 'line',
-                    stacked: false
+                    stacked: false,
+                    width:'100%'
                 },
                 dataLabels: {
                     enabled: false
@@ -71,8 +72,7 @@ class AdjustedDemand extends Component {
                 markers: {
                     size: [null,null,4,4,3,3],
                     hover: {
-                        size: [null,null,4,4,3,3],
-                        sizeOffset: 3
+                        size: 6,
                       }
                 },
                 annotations: {
@@ -281,12 +281,12 @@ class AdjustedDemand extends Component {
         return (
             <div className="AdjustedDemand">
                 <div className="row">
-                    <div className="mixed-chart">
+                    <div className="mixed-chart" style={{width:'100%'}}>
                         <Chart
                             options={this.state.options}
                             series={this.state.series}
                             type="line"
-                            width="950px"
+                            width="100%"
                             height="500px"
                         />
                     </div>

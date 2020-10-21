@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Button, Card, Col, Row } from 'react-bootstrap';
 import './ConfidenceUI.css';
 
 function ConfidenceUI() {
@@ -16,7 +16,7 @@ function ConfidenceUI() {
     return (
         <div className="confidence-card">
             <Row className="confidence-block">
-                <Col>
+                <Col className="padded-zero-col">
                     <div className="confidence-block-element">
                         <select value={confidence} onChange={handleOnChange}>
                             <option value="Confidence">Confidnce</option>
@@ -26,19 +26,24 @@ function ConfidenceUI() {
                         </select>
                     </div>
                 </Col>
-                <Col>
+                <Col className="padded-zero-col">
                     <div className="confidence-block-element">
-                    <input type="date" className="period-date" />
+                    <input type="date" className="period-date"/>
                     </div>
                 </Col>
-                <Col>
+                <Col className="padded-zero-col">
                     <div className="confidence-block-element">
                     <input type="text" className="period-count" size="7" maxLength='2' pattern= "[0-9]" placeholder="Periods" />
                     </div>
                 </Col>
+                <Col className="padded-zero-col">
+                    <div className="confidence-block-element">
+                    <Button type="submit" className="btn-primary">Update</Button>
+                    </div>
+                </Col>
             </Row>
             <Row className="ULHeader">
-                <Col className="padded-card">
+                <Col className="padded-zero-col">
                     <div className="UL-block-element">
                     <Card className="text-center  UL-info-card">
                         <Card.Header>Lower(U)</Card.Header>
@@ -49,7 +54,7 @@ function ConfidenceUI() {
                     </div>
                 </Col>
 
-                <Col className="padded-card">
+                <Col className="padded-zero-col">
                     <div className="UL-block-element">
                     <Card className="text-center  UL-info-card">
                         <Card.Header>Lower($)</Card.Header>
@@ -60,7 +65,7 @@ function ConfidenceUI() {
                     </div>
                 </Col>
 
-                <Col className="padded-card">
+                <Col className="padded-zero-col">
                     <div className="UL-block-element">
                     <Card className="text-center  UL-info-card">
                         <Card.Header>Upper(U)</Card.Header>
@@ -71,7 +76,7 @@ function ConfidenceUI() {
                     </div>
                 </Col>
 
-                <Col className="padded-card">
+                <Col className="padded-zero-col">
                     <div className="UL-block-element">
                     <Card className="text-center UL-info-card">
                         <Card.Header>Upper($)</Card.Header>

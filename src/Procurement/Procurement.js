@@ -17,7 +17,7 @@ function Procurement() {
                         <div className="content">
                             <div className="container-fluid p-0 px-lg-0">
                                 <Navbar sideBarClickHandler={context.toggleButtonClickHandler} isOpen={context.state.isOpen} />
-                                <h1 className="center">Procurement Page</h1>
+                                <h1 className="center"> <i className="fas fa-cart-arrow-down"></i> Procurement </h1>
                             </div>
                         </div>
                         <Footer />

@@ -35,9 +35,10 @@ export class Inventory extends Component {
                     {context.state.sideBar}
                     <div className={context.state.pageContentDiv}>
                       <div className="content">
-                        <div className="container-fluid p-0 px-lg-0">
+                        {/* <div className="container-fluid p-0 px-lg-0 sticky-nav"> */}
                           <Navbar sideBarClickHandler={context.toggleButtonClickHandler} isOpen={context.state.isOpen} />
-                        </div>
+                       {/*  </div> */}
+
                         <div className="row Inventory_header">
                           <InvHeader />
                         </div>
