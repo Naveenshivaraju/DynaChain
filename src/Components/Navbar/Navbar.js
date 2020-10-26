@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import './Navbar.css'
 import ToggleButton from '../Sidebar/ToggleButton';
 import profileImage from './user1.png';
-import {MyContext} from '../../MyProvider'
+import {MyContext} from '../../MyProvider';
+import { Link } from 'react-router-dom';
+
 
 export class Navbar extends Component {
 
@@ -15,7 +17,7 @@ export class Navbar extends Component {
             <div className="sticky-nav container-fluid p-0 px-lg-0 ">
               <nav className="navbar navbar-expand navbar-light my-navbar">
                 <ToggleButton click={context.toggleButtonClickHandler} isOpen={context.state.isOpen} />
-                <h1 className="h3 mb-0 text-gray-800 brand">Cognitive Control Tower</h1>
+                <Link to="/"><h1  className="h3 mb-0 text-gray-800 brand" >Cognitive Control Tower</h1></Link>
 
                 <ul className="navbar-nav ml-auto">
 

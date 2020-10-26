@@ -11,6 +11,7 @@ import LagAnalysis from './Components/LagAnalysis/LagAnalysis';
 import { Col, Container, Row } from 'react-bootstrap';
 import DemandHeader from './Components/DemandHeader/DemandHeader';
 import ConfidenceUI from './Components/ConfidenceUI/ConfidenceUI';
+import ConfidenceForm from './Components/ConfidenceForm/ConfidenceForm';
 
 
 function Demand() {
@@ -29,17 +30,21 @@ function Demand() {
                                        {/*  </div> */}
 										<Container fluid>
 											<div className="demand-header">
-												<DemandHeader />
+												<DemandHeader /><hr style={{marginTop:'0px'}}/>
 											</div>
-											<ConfidenceUI />
+                                            
+                                            <div>
+                                                <ConfidenceForm />
+                                            </div>
+											{/* <ConfidenceUI /><br/> */}
 
-											 <h1 style={{ textAlign: 'center', marginTop: '50px' }}>Unit Demand</h1>
+											{/* <h1 style={{ textAlign: 'center', marginTop: '50px' }}>Unit Demand</h1>
                                             <div style={{ backgroundColor: '#fff', border: '1px solid #ccc', margin: 'auto', width: '65%', padding: '10px' }}>
                                                 <UnitDemand />
-                                            </div>
+                                            </div> */}
 
 
-                                            <h1 style={{ textAlign: 'center', marginTop: '50px' }}>Adjusted Demand</h1>
+                                            {/* <h1 style={{ textAlign: 'center', marginTop: '50px' }}>Adjusted Demand</h1> */}
                                             <div style={{ backgroundColor: '#fff', border: '1px solid #ccc', margin: 'auto', width: '70%', padding: '10px' }}>
                                                 <AdjustedDemand />
                                             </div>
@@ -66,7 +71,7 @@ function Demand() {
                                                     <Card.Title>123</Card.Title>
                                                     <Card.Text>
                                                         Hello World!
-                                        </Card.Text>
+                                                    </Card.Text>
                                                 </Card.Body>
                                             </Card>
 											

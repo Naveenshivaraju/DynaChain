@@ -8,20 +8,20 @@ class AdjustedDemand extends Component {
         this.state = {
 
             series: [
-                {
+                /* {
                     name: 'Volume',
                     type: 'column',
                     data: [15000, 0, 80000, 45000, 60000, 50000, 35000, 55000, 62000, 48000, 38000, 46000, null, null, null, null, null, null, null, null, null, null, null, null]
-                },
-                {
-                    name: "Promoted",
-                    type: "column",
-                    data: [12000, 50000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null]
-                },
+                }, */
                 {
                     name: 'Actuals',
                     type: 'line',
                     data: [800, 1290, 1500, 1000, 1240, 1450, 1500, 1300, 1600, 1570, 1850, 1208, null, null, null, null, null, null, null, null, null, null, null, null ]
+                },
+                {
+                    name: "Promoted",
+                    type: "column",
+                    data: [1200, 5000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null]
                 },
                 {
                     name: 'Forcast',
@@ -37,7 +37,12 @@ class AdjustedDemand extends Component {
                     name: 'Lower Bound',
                     type: 'line',
                     data: [null, null, null, null, null, null, null, null, null, null, null, 1208, 750, 1210, 1400, 800, 1140, 1350, 1450, 1250, 1460, 1500, 1800, 1108]
-                }
+                },
+                /* {
+                    name: "Whether",
+                    type: "column",
+                    data: [-300, -500, -100, 0, 0, -400, 0, 0, 0, -100, -800, -300, null, null, null, null, null, null, null, null, null, null, null, null]
+                }, */
             ],
 
 
@@ -52,25 +57,24 @@ class AdjustedDemand extends Component {
                     enabled: false
                 },
                 stroke: {
-                    width: [3, 3, 3, 3, 1, 1],
-                    curve: [null,null,"smooth","smooth","smooth","smooth"]
+                    width: [4, 4, 4, 1, 1, 4],
+                    curve: ["smooth",null,"straight","smooth","smooth", null]
                 },
                 title: {
                     text: 'Adjusted Demand (2014 Jan - 2014 Dec)',
-                    align: 'left',
-                    offsetX: 70,
+                    align: 'center',
+                    offsetX: 0,
                     offsetY: 0
                 },
                 colors: [
-                    "#008FFB",
-                    "#00E396",
-                    "#FEB019",
-                    "#1e306a",
-                    "#3b8004",
-                    "#e62e2d",
+                    "#4a8ffb",
+                    "#6fe397",
+                    "#f0af18",
+                    "#e7405e",
+                    "#775dcf",
                   ],
                 markers: {
-                    size: [null,null,4,4,3,3],
+                    size: [4, null, 4, 3, 3, null],
                     hover: {
                         size: 6,
                       }
@@ -120,9 +124,9 @@ class AdjustedDemand extends Component {
                 },
                 yaxis: [
                     {
-                        /* seriesName: 'Volume', */
-                        min: 0,
-                        max: 60000,
+                        seriesName: 'Actuals',
+                        /* min: -1000,
+                        max: 6000, */
                         axisTicks: {
                             show: true,
                         },
@@ -183,7 +187,7 @@ class AdjustedDemand extends Component {
                             }
                         },
                     },
-                    {
+                    /* {
                         seriesName: 'Actuals',
                         opposite: true,
                         axisTicks: {
@@ -212,7 +216,7 @@ class AdjustedDemand extends Component {
                                 color: '#FEB019',
                             }
                         },
-                    },
+                    }, */
                     /* {
                         seriesName: 'Forcast',
                         opposite: true,
