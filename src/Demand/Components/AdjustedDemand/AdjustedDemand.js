@@ -62,9 +62,15 @@ class AdjustedDemand extends Component {
                 },
                 title: {
                     text: 'Adjusted Demand (2014 Jan - 2014 Dec)',
-                    align: 'center',
-                    offsetX: 0,
-                    offsetY: 0
+                    align: 'left',
+                    offsetX: 70,
+                    offsetY: 0,
+                    style: {
+                        fontSize:  '16px',
+                        fontWeight:  '500',
+                        fontFamily:  undefined,
+                       /*  color:  'darkgray' */
+                      }
                 },
                 colors: [
                     "#4a8ffb",

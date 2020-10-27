@@ -12,6 +12,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import DemandHeader from './Components/DemandHeader/DemandHeader';
 import ConfidenceUI from './Components/ConfidenceUI/ConfidenceUI';
 import ConfidenceForm from './Components/ConfidenceForm/ConfidenceForm';
+import './Demand.css';
 
 
 function Demand() {
@@ -29,11 +30,11 @@ function Demand() {
                                             <Navbar sideBarClickHandler={context.toggleButtonClickHandler} isOpen={context.state.isOpen} />
                                        {/*  </div> */}
 										<Container fluid>
-											<div className="demand-header">
+											{/* <div className="demand-header">
 												<DemandHeader /><hr style={{marginTop:'0px'}}/>
-											</div>
+											</div> */}
                                             
-                                            <div>
+                                            <div className="confidence-form">
                                                 <ConfidenceForm />
                                             </div>
 											{/* <ConfidenceUI /><br/> */}
@@ -43,11 +44,22 @@ function Demand() {
                                                 <UnitDemand />
                                             </div> */}
 
+                                            <Row>
+                                                <Col xl={10}>
+                                                    <Card>
+                                                    <Card.Body>
+                                                        <AdjustedDemand />
+                                                    </Card.Body>
+                                                    </Card>
+                                                </Col>
+                                                <Col xl={2}>Upper Lower Cards</Col>
+                                            </Row>
+
 
                                             {/* <h1 style={{ textAlign: 'center', marginTop: '50px' }}>Adjusted Demand</h1> */}
-                                            <div style={{ backgroundColor: '#fff', border: '1px solid #ccc', margin: 'auto', width: '70%', padding: '10px' }}>
+                                           {/*  <div style={{ backgroundColor: '#fff', border: '1px solid #ccc', margin: 'auto', width: '70%', padding: '10px' }}>
                                                 <AdjustedDemand />
-                                            </div>
+                                            </div> */}
 
                                             <h1 style={{ textAlign: 'center', marginTop: '50px' }}>Forcast Stability</h1>
                                             <div style={{ backgroundColor: '#fff', border: '1px solid #ccc', margin: 'auto', width: '65%', padding: '10px' }}>
