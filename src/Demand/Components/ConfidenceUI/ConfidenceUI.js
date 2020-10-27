@@ -13,6 +13,7 @@ function ConfidenceUI() {
         console.log("Confidence value :"+confidence)
         setConfidence(event.target.value)
     }
+    
     return (
         <div className="confidence-card">
             <Row className="confidence-block">
