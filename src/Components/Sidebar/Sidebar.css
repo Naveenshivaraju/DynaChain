@@ -3,7 +3,6 @@ sidebar
 ----------------------*/
 
 .sidebar-wrapper {
-    z-index: 1000;
     height: 100%;
     width: 270px;
     left: 0px;

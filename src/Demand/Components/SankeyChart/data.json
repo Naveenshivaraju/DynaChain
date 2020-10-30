@@ -1,0 +1,133 @@
+{
+    "data":{
+    "nodes": [
+      {
+        "id": "Suppl 1: A",
+        "color": "hsl(27, 70%, 50%)",
+        "prod_name": "1200012_100A"
+      },
+      {
+        "id": "Suppl 1: B",
+        "color": "hsl(27, 70%, 50%)",
+        "prod_name": "7000007_100A"
+      },
+      {
+        "id": "Suppl 2: C",
+        "color": "hsl(26, 70%, 50%)",
+        "prod_name": "11000011_100A"
+      },
+      {
+        "id": "Suppl 2: D",
+        "color": "hsl(26, 70%, 50%)",
+        "prod_name": "11000011_200A"
+      },
+      {
+        "id": "Mfg 1",
+        "color": "hsl(65, 70%, 50%)",
+        "prod_name": "60000006_100A"
+      },
+      {
+        "id": "Mfg 2",
+        "color": "hsl(19, 70%, 50%)",
+        "prod_name": "90000009_100A"
+      },
+      {
+        "id": "DC 1: A",
+        "color": "hsl(18, 70%, 50%)",
+        "prod_name": "20000002_100A"
+      },
+      {
+        "id": "DC 1: B",
+        "color": "hsl(18, 70%, 50%)",
+        "prod_name": "20000002_100A"
+      },
+      {
+        "id": "DC 1: C",
+        "color": "hsl(18, 70%, 50%)",
+        "prod_name": "20000002_100A"
+      },
+      {
+        "id": "DC 1: D",
+        "color": "hsl18, 70%, 50%)",
+        "prod_name": "20000002_100A"
+      },
+      {
+        "id": "DC 2: A",
+        "color": "hsl(35, 70%, 50%)",
+        "prod_name": "30000003_100A"
+      }
+    ],
+    "links": [
+      {
+        "source": "Suppl 1: A",
+        "target": "Mfg 1",
+        "value": 54.3,
+        "linklabel": "Suppl 1: Prod 1",
+        "gap":15000
+      },
+      {
+        "source": "Suppl 1: B",
+        "target": "Mfg 1",
+        "value": 30.3,
+        "linklabel": "Suppl 1: Prod 2",
+        "gap":8285
+      },
+      {
+        "source": "Suppl 2: C",
+        "target": "Mfg 1",
+        "value": 2.36,
+        "linklabel": "Suppl 2: Prod 1",
+        "gap":5172
+      },
+      {
+        "source": "Suppl 2: D",
+        "target": "Mfg 1",
+        "value": 2.36,
+        "linklabel": "Suppl 2: Prod 1",
+        "gap":15000
+      },
+      {
+        "source": "Mfg 1",
+        "target": "Mfg 2",
+        "value": 4.36,
+        "linklabel": "Mfg 1: Prod 1",
+        "gap":15680
+      },
+      {
+        "source": "Mfg 2",
+        "target": "DC 1: A",
+        "value": 6.4,
+        "linklabel": "Mfg 2: Prod 1",
+        "gap":15680
+      },
+      {
+        "source": "Mfg 2",
+        "target": "DC 1: B",
+        "value": 5.4,
+        "linklabel": "Mfg 2: Prod 1",
+        "gap":12680
+      },
+      {
+        "source": "Mfg 2",
+        "target": "DC 1: C",
+        "value": 2.4,
+        "linklabel": "Mfg 2: Prod 1",
+        "gap":9680
+      },
+      {
+        "source": "Mfg 2",
+        "target": "DC 1: D",
+        "value": 2.0,
+        "linklabel": "Mfg 2: Prod 1",
+        "gap":7680
+      },
+      {
+        "source": "Mfg 2",
+        "target": "DC 2: A",
+        "value": 2.4,
+        "linklabel": "Mfg 2: Prod 1",
+        "gap":9580
+      }
+    ]
+    }
+  }

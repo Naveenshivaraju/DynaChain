@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
+import './AdjustedDemand.css';
 
 class AdjustedDemand extends Component {
     constructor(props) {
@@ -48,7 +49,7 @@ class AdjustedDemand extends Component {
 
             options: {
                 chart: {
-                    height: 350,
+                    height: 450,
                     type: 'line',
                     stacked: false,
                     width:'100%'
@@ -67,7 +68,7 @@ class AdjustedDemand extends Component {
                     offsetY: 0,
                     style: {
                         fontSize:  '16px',
-                        fontWeight:  '500',
+                        fontWeight:  '600',
                         fontFamily:  undefined,
                        /*  color:  'darkgray' */
                       }
@@ -291,13 +292,13 @@ class AdjustedDemand extends Component {
         return (
             <div className="AdjustedDemand">
                 <div className="row">
-                    <div className="mixed-chart" style={{width:'100%'}}>
+                    <div className="mixed-chart" style={{width:'100%',marginBottom:'-10px'}}>
                         <Chart
                             options={this.state.options}
                             series={this.state.series}
                             type="line"
                             width="100%"
-                            height="500px"
+                            height="450px"
                         />
                     </div>
                 </div>

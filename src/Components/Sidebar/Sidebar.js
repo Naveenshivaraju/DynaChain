@@ -28,32 +28,32 @@ function Sidebar(props) {
                   <span className="align-middle">DynaChain &trade;</span>
                 </a>
 
-                <ul className="navbar-nav align-self-stretch"/*  onClick={() => context.toggleButtonClickHandler()} */>
+                <ul className="navbar-nav align-self-stretch">
 
                   <li className="sidebar-header">Dashboard
-            </li>
+                  </li>
 
-                  <li className="">
+                  <li className=""  onClick={() => context.toggleButtonClickHandler()}>
                     <Link className="nav-link text-left sidebarlink" role="button" aria-haspopup="true" aria-expanded="false"
                       to="/">
                       <i className="fas fa-chart-bar"></i> Home
-                </Link>
+                    </Link>
                   </li>
 
-                  <li className="">
+                  <li className="" onClick={() => context.toggleButtonClickHandler()}>
                     <Link className="nav-link text-left sidebarlink" role="button" to="/procurement" >
                       <i className="fas fa-cart-arrow-down"></i> Procurement
-              </Link>
+                    </Link>
 
                   </li>
 
-                  <li className="" >
+                  <li className="" onClick={() => context.toggleButtonClickHandler()}>
                     <Link className="nav-link text-left sidebarlink" role="button" to="/demand" >
                       <i className="fas fa-chart-line"></i> Demand
                     </Link>
                   </li>
 
-                  <li className="">
+                  <li className="" onClick={() => context.toggleButtonClickHandler()}>
                     <Link className="nav-link text-left sidebarlink" role="button" to="/manufacturing">
                       <i className="fas fa-industry"></i> Manufacturing
                     </Link>
@@ -61,7 +61,7 @@ function Sidebar(props) {
 
                   <li className="">
                     <div className="row">
-                      <div className="col-sm-10">
+                      <div className="col-sm-10" onClick={() => context.toggleButtonClickHandler()}>
                         <Link className="nav-link-dd text-left-dd sidebarlink-dd dd" role="button" to="/inventory">
                           <i className="fas fa-warehouse i-dd" ></i> Inventory
                         </Link>
@@ -83,7 +83,7 @@ function Sidebar(props) {
                     </div>
                   </li>
 
-                  <li className="">
+                  <li className="" onClick={() => context.toggleButtonClickHandler()}>
                     <Link className="nav-link text-left sidebarlink" role="button" to="/distribution">
                       <i className="fas fa-truck"></i> Distribution
                     </Link>

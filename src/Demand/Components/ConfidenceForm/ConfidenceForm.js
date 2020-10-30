@@ -10,7 +10,7 @@ function ConfidenceForm() {
                 <Row>
                     <Col md={3} sm="auto">
                         <Form.Group>
-                            <Form.Label className="mb-2 mr-sm-2" htmlFor="confidenceSelect" srOnly>
+                            <Form.Label className="mb-2 mr-sm-2" htmlFor="confidenceSelect" >
                                 Confidence
                             </Form.Label>
                             <Form.Control
@@ -29,7 +29,7 @@ function ConfidenceForm() {
                     </Col>
                     <Col  md={3} sm="auto">
                         <Form.Group>
-                            <Form.Label className="mb-2 mr-sm-2" htmlFor="inlineFormInputName2" srOnly>
+                            <Form.Label className="mb-2 mr-sm-2" htmlFor="inlineFormInputName2" >
                                 Start Date
                             </Form.Label>
                             <Form.Control
@@ -43,7 +43,7 @@ function ConfidenceForm() {
                     </Col>
                     <Col  md={3} sm="auto">
                         <Form.Group>
-                            <Form.Label className="mb-2 mr-sm-2" htmlFor="timeBucketSelect" srOnly>
+                            <Form.Label className="mb-2 mr-sm-2" htmlFor="timeBucketSelect" >
                                 Time Bucket
                             </Form.Label>
                             <Form.Control
@@ -63,7 +63,7 @@ function ConfidenceForm() {
                     </Col>
                     <Col  md={2} sm="auto">
                         <Form.Group>
-                            <Form.Label className="mb-2 mr-sm-2" htmlFor="inlineFormInputName" srOnly>
+                            <Form.Label className="mb-2 mr-sm-2" htmlFor="inlineFormInputName" >
                                 Periods
                             </Form.Label>
                             <Form.Control
