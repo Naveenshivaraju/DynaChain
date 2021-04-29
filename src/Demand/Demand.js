@@ -14,6 +14,43 @@ import ConfidenceUI from './Components/ConfidenceUI/ConfidenceUI';
 import ConfidenceForm from './Components/ConfidenceForm/ConfidenceForm';
 import './Demand.css';
 import SankeyChart from './Components/SankeyChart/SankeyChart';
+import TimeLine from './Components/TimeLine/TimeLine';
+import CircularBarPlot from './Components/CircularBarPlot/CircularBarPlot';
+/* import StackedCircular from './Components/CircularBarPlot/StackedCircular';
+ */
+
+const items = [
+	{
+		name: 'Supply',
+        active: false,
+        date: '9 Week Out',
+	},
+	{
+		name: 'Mfg 1',
+        active: false,
+        date: '7 Week Out',
+    },
+    {
+		name: 'Mfg 2',
+        active: false,
+        date: '5 Week Out',
+	},
+	{
+		name: 'Inventory',
+        active: false,
+        date: '3 Week Out',
+	},
+	{
+		name: 'Distribution',
+        active: false,
+        date: '1 Week Out',
+    },
+    {
+		name: 'temp',
+        active: false,
+        date: '0 Week Out',
+	}
+]
 
 
 function Demand() {
@@ -117,14 +154,25 @@ function Demand() {
                                                 <LagAnalysis />
                                             </div>
 
-                                           {/*  <div style={{marginTop:'20px'}}>
+                                            <div style={{marginTop:'20px'}}>
                                                 <h2 style={{textAlign:'center'}}>Sankey Chart</h2>
                                                 <Card>
                                                     <Card.Body>
-                                                        <SankeyChart />
+                                                        <TimeLine items={items}/>
+                                                        <SankeyChart />z
                                                     </Card.Body>
                                                 </Card>
-                                            </div> */}
+                                            </div>
+
+                                            <div style={{marginTop:'20px'}}>
+                                                <h2 style={{textAlign:'center'}}>Circular Barplot</h2>
+                                                <Card>
+                                                    <Card.Body>
+                                                        <CircularBarPlot />
+                                                        {/* <StackedCircular /> */}
+                                                    </Card.Body>
+                                                </Card>
+                                            </div>
                                         </Container>
                                     
                                     </div>

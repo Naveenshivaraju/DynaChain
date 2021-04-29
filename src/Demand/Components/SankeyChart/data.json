@@ -32,30 +32,31 @@
         "prod_name": "90000009_100A"
       },
       {
-        "id": "DC 1: A",
+        "id": "DC 1",
         "color": "hsl(18, 70%, 50%)",
         "prod_name": "20000002_100A"
       },
       {
-        "id": "DC 1: B",
-        "color": "hsl(18, 70%, 50%)",
-        "prod_name": "20000002_100A"
-      },
-      {
-        "id": "DC 1: C",
-        "color": "hsl(18, 70%, 50%)",
-        "prod_name": "20000002_100A"
-      },
-      {
-        "id": "DC 1: D",
-        "color": "hsl18, 70%, 50%)",
-        "prod_name": "20000002_100A"
-      },
-      {
-        "id": "DC 2: A",
+        "id": "DC 2",
         "color": "hsl(35, 70%, 50%)",
         "prod_name": "30000003_100A"
+      },
+      {
+        "id": "Cust 1",
+        "color": "hsl(40, 70%, 50%)",
+        "prod_name": "Cust 1"
+      },
+      {
+        "id": "Cust 2",
+        "color": "hsl(50, 70%, 50%)",
+        "prod_name": "Cust 2"
+      },
+      {
+        "id": "Cust 3",
+        "color": "hsl(60, 70%, 50%)",
+        "prod_name": "Cust 3"
       }
+
     ],
     "links": [
       {
@@ -63,71 +64,122 @@
         "target": "Mfg 1",
         "value": 54.3,
         "linklabel": "Suppl 1: Prod 1",
-        "gap":15000
+        "gap":15000,
+        "plan_date": "Sep-08-2020",
+        "actual_date": "Sep-10-2020",
+        "delay": 4
       },
       {
         "source": "Suppl 1: B",
         "target": "Mfg 1",
         "value": 30.3,
         "linklabel": "Suppl 1: Prod 2",
-        "gap":8285
+        "gap":8285,
+        "plan_date": "Sep-07-2020",
+        "actual_date": "Sep-11-2020",
+        "delay": 10
       },
       {
         "source": "Suppl 2: C",
         "target": "Mfg 1",
         "value": 2.36,
         "linklabel": "Suppl 2: Prod 1",
-        "gap":5172
+        "gap":5172,
+        "plan_date": "Sep-06-2020",
+        "actual_date": "Sep-9-2020",
+        "delay": 3
       },
       {
         "source": "Suppl 2: D",
         "target": "Mfg 1",
         "value": 2.36,
         "linklabel": "Suppl 2: Prod 1",
-        "gap":15000
+        "gap":15000,
+        "plan_date": "Sep-07-2020",
+        "actual_date": "Sep-10-2020",
+        "delay": 0
       },
       {
         "source": "Mfg 1",
         "target": "Mfg 2",
-        "value": 4.36,
+        "value": 34.36,
         "linklabel": "Mfg 1: Prod 1",
-        "gap":15680
+        "gap":15680,
+        "plan_date": "Sep-16-2020",
+        "actual_date": "Sep-18-2020",
+        "delay": 7
       },
       {
         "source": "Mfg 2",
-        "target": "DC 1: A",
+        "target": "DC 1",
         "value": 6.4,
         "linklabel": "Mfg 2: Prod 1",
-        "gap":15680
+        "gap":15680,
+        "plan_date": "Sep-08-2020",
+        "actual_date": "Sep-10-2020",
+        "delay": 4
       },
       {
         "source": "Mfg 2",
-        "target": "DC 1: B",
+        "target": "DC 2",
         "value": 5.4,
         "linklabel": "Mfg 2: Prod 1",
-        "gap":12680
+        "gap":12680,
+        "plan_date": "Sep-08-2020",
+        "actual_date": "Sep-10-2020",
+        "delay": 1
       },
       {
-        "source": "Mfg 2",
-        "target": "DC 1: C",
+        "source": "DC 1",
+        "target": "Cust 1",
+        "value": 1.8,
+        "linklabel": "DC 1: Cust 1",
+        "gap":480,
+        "plan_date": "Sep-08-2020",
+        "actual_date": "Sep-10-2020",
+        "delay": 11
+      },
+      {
+        "source": "DC 1",
+        "target": "Cust 2",
         "value": 2.4,
-        "linklabel": "Mfg 2: Prod 1",
-        "gap":9680
+        "linklabel": "DC 1: Cust 2",
+        "gap":680,
+        "plan_date": "Sep-08-2020",
+        "actual_date": "Sep-10-2020",
+        "delay": 8
       },
       {
-        "source": "Mfg 2",
-        "target": "DC 1: D",
-        "value": 2.0,
-        "linklabel": "Mfg 2: Prod 1",
-        "gap":7680
+        "source": "DC 1",
+        "target": "Cust 3",
+        "value": 1.2,
+        "linklabel": "DC 1: Cust 3",
+        "gap":180,
+        "plan_date": "Sep-08-2020",
+        "actual_date": "Sep-10-2020",
+        "delay": 12
       },
       {
-        "source": "Mfg 2",
-        "target": "DC 2: A",
-        "value": 2.4,
-        "linklabel": "Mfg 2: Prod 1",
-        "gap":9580
+        "source": "DC 2",
+        "target": "Cust 2",
+        "value": 3.4,
+        "linklabel": "DC 2: Cust 2",
+        "gap":980,
+        "plan_date": "Sep-08-2020",
+        "actual_date": "Sep-10-2020",
+        "delay": 5
+      },
+      {
+        "source": "DC 2",
+        "target": "Cust 3",
+        "value": 1.9,
+        "linklabel": "DC 2: Cust 3",
+        "gap":380,
+        "plan_date": "Sep-08-2020",
+        "actual_date": "Sep-10-2020",
+        "delay": 9
       }
+
     ]
     }
   }

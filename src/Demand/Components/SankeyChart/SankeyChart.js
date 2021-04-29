@@ -8,10 +8,11 @@ const sankeydata = data.data;
 function SankeyChart() {
     return (
         <div style={{height:'400px',width:'100%'}}>
-            <ResponsiveSankey
+            <ResponsiveSankey 
+                isInteractive={true}
                 linkContract={1}
                 data={sankeydata}
-                margin={{ top: 40, right: 160, bottom: 40, left: 100 }}
+                margin={{ top: 40, right: 150, bottom: 40, left: 100 }}
                 align="justify"
                 sort="descending"
                 colors={{ scheme: 'category10' }}
@@ -49,12 +50,11 @@ function SankeyChart() {
                         ]
                     }
                 ]}
-                nodeTooltip={node => {
+                nodeTooltip={node => { 
                                     console.log("Node Info")
                                     console.log(node)
                                     return (
-                                        <div>
-                                            <Card>
+                                            <Card className="tooltip-card" /*  style={{top:'100px'}} */>
                                                 <Card.Header style={{backgroundColor:node.color, opacity:'0.8'}}>{node.id}</Card.Header>
                                                 <Card.Body>
                                                     <Card.Title></Card.Title>
@@ -63,29 +63,43 @@ function SankeyChart() {
                                                     </Card.Text>
                                                 </Card.Body>
                                             </Card>
-                                        </div>
                                     )
                                 }
                             }
                 linkTooltip={link => {
                                     console.log("Link Info")
                                     console.log(link)
+                                    let circle_color="";
+                                    if(link.delay < 0)
+                                    circle_color="yellow"
+                                    else if(link.delay >= 0 && link.delay <= 5)
+                                    circle_color="green";
+                                    else if(link.delay >= 6 && link.delay <= 9)
+                                    circle_color="orange"
+                                    else
+                                    circle_color="red";
+
                                     return (
-                                        <div>
-                                            <Card>
+                                            <Card className="tooltip-card">
                                                 <Card.Header style={{backgroundColor:link.color, opacity:'0.8'}}>{link.source.prod_name}</Card.Header>
                                                 <Card.Body>
                                                     <Card.Title>{link.source.id} {' -> '} {link.target.id}</Card.Title>
                                                     <Card.Text>
                                                         <span> Weighted Adherence: {(link.value/100).toFixed(3)}</span><br/>
-                                                        <span> GAP: {link.gap}</span><br/>
+                                                        <span> GAP: {link.gap.toLocaleString()}</span>{/* <br/> */}
+                                                        {/* <span> Plan Date: {link.plan_date}</span><br/>
+                                                        <span> Actual Date: {link.actual_date}</span><br/>
+                                                        <span> Delay: {link.delay} days</span> */}
+                                                        <svg height="35" width="35">
+                                                        <circle cx="22" cy="17" r="9" stroke="black" strokeWidth="1" fill={circle_color} />
+                                                        </svg>
+                                                        <br/>
                                                     </Card.Text>
                                                 </Card.Body>
                                             </Card>
-                                        </div>
                                     )
                                 }
-                            }
+                }
             />
         </div>
     )
